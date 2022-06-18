@@ -27,3 +27,5 @@ for divTag in cms_website_parser.find_all("div", attrs = {"class" : re.compile("
       doc_metadata.append("https://www.cms.ba.gov.br" + doc_download_link)
 
       documents.append(doc_metadata)
+
+documents_df = pd.DataFrame(documents, columns = ["Type", "Year", "Reference","Download_link"])
